@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dinámica QR</title>
+</head>
+<body>
+    <h1>Introduce tu nombre</h1>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <button onclick="mostrarImagen()">Enviar</button>
+    <div id="resultado" style="margin-top:20px;"></div>
+    <script>
+        function mostrarImagen() {
+            const nombre = document.getElementById('nombre').value.toLowerCase().trim();
+            const resultado = document.getElementById('resultado');
+            const URL_BASE = 'https://tu-url-base.com/imagenes/'; // Reemplaza con tu URL base
+            let imagenURL;
+
+            switch (nombre) {
+                case 'norma':
+                case 'normita':
+                case 'marifer':
+                case 'mariel':
+                case 'laura':
+                case 'itzel':
+                case 'enrique':
+                case 'dani':
+                case 'antonio':
+                case 'cecy':
+                case 'allison':
+                case 'alejandra':
+                case 'yudi':
+                case 'yuri':
+                case 'zayle':
+                case 'alexis':
+                case 'eliel':
+                case 'nallely':
+                case 'angelica':
+                case 'ruben':
+                case 'francisco':
+                    imagenURL = `${URL_BASE}${nombre}.jpg`;
+                    break;
+                default:
+                    imagenURL = `${URL_BASE}default.jpg`; // Imagen por defecto
+            }
+
+            resultado.innerHTML = `<img src="${imagenURL}" alt="Imagen para ${nombre}" style="max-width:300px;">`;
+        }
+    </script>
+</body>
+</html>
