@@ -66,7 +66,7 @@
         function mostrarImagen() {
             const nombre = document.getElementById('nombre').value.toLowerCase().trim();
             const resultado = document.getElementById('resultado');
-            const URL_BASE = 'https://tu-url-base.com/imagenes/'; // Reemplaza con tu URL base
+            const URL_BASE = 'https://alexisnoy22.github.io/DinamicaLiber2/'; // Reemplaza con tu URL base
             let imagenURL;
 
             switch (nombre) {
@@ -97,7 +97,7 @@
                     imagenURL = `${URL_BASE}default.jpg`; // Imagen por defecto
             }
 
-            resultado.innerHTML = `<img src="${imagenURL}" alt="Imagen para ${nombre}" style="max-width:300px;">`;
+            resultado.innerHTML = `<img src="${imagenURL}" alt="IMAGEN PARA ${nombre}" style="max-width:300px;">`;
         }
     </script>
 </body>
